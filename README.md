@@ -1,6 +1,8 @@
 # Trending Machine [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-Explore Github's trending page in the past. You can see it running here: [http://trending-machine.salimalami.com](http://trending-machine.salimalami.com).
+Explore Github's trending page in the past.
+
+[LIVE DEMO](http://trending-machine.salimalami.com).
 
 This project is intended to be an example of the [spider package](https://github.com/celrenheit/spider).
 
