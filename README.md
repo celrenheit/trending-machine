@@ -47,3 +47,8 @@ And in the second run:
 $ cd $GOPATH/src/github.com/celrenheit/trending-machine/web
 $ gulp
 ```
+
+
+# Inspiration
+
+This project is inspired by [https://github.com/josephyzhou/github-trending](https://github.com/josephyzhou/github-trending).
