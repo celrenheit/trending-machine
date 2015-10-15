@@ -1,6 +1,6 @@
 # Trending Machine
 
-Explore Github's trending page in the past.
+Explore Github's trending page in the past. You can see it running here: [http://trending-machine.salimalami.com](http://trending-machine.salimalami.com).
 
 This project is intended to be an example of the [spider package](https://github.com/celrenheit/spider).
 
@@ -29,7 +29,7 @@ $ cd $GOPATH/src/github.com/celrenheit/trending-machine
 $ go run *.go
 ```
 
-This will launch a web server. Open a new tab/window in your browser pointing to http://localhost:3000.
+This will launch a web server. Open a new tab/window in your browser pointing to [http://localhost:3000](http://localhost:3000).
 
 # Developpement
 
