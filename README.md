@@ -1,4 +1,4 @@
-# Trending Machine
+# Trending Machine [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 Explore Github's trending page in the past. You can see it running here: [http://trending-machine.salimalami.com](http://trending-machine.salimalami.com).
 
@@ -52,3 +52,7 @@ $ gulp
 # Inspiration
 
 This project is inspired by [https://github.com/josephyzhou/github-trending](https://github.com/josephyzhou/github-trending).
+
+# License
+
+[MIT License](https://github.com/celrenheit/trending-machine/blob/master/LICENSE)
