@@ -13,25 +13,26 @@
 
   <md-list>
     <md-subheader class="md-no-sticky">
-      <div layout="row" layout-sm="column">
+      <div layout="row" layout-sm="column" ng-class="{'md-inputs-no-padding': $mdMedia('gt-md')}">
         <md-input-container flex md-no-float layout="row" layout-align="center center">
             <md-icon class="material-icons" ng-click="showPicker($event)">event</md-icon>
             <input ng-model='selectedDate' ng-click="showPicker($event)" type="date" placeholder="Date" name="date"  style="text-align:center;" flex>
         </md-input-container>
         <md-input-container md-no-float flex>
-          <md-select ng-model="selectedLang" aria-label="Select language">
+          <md-icon class='material-icons'>code</md-icon>
+          <md-select ng-model="selectedLang" aria-label="Select language" style="margin-left:36px">
             <md-option ng-repeat="lang in languages" value="{{lang}}">
               {{ (lang == "__all__" ? "All languages" : lang)  }}
             </md-option>
           </md-select>
         </md-input-container>
+        <md-input-container md-no-float flex>
+          <md-icon class='material-icons'>search</md-icon>
+          <input ng-model="searchText" placeholder=" Filter by name, contributor, ...">
+        </md-input-container>
       </div>
-      <md-input-container flex>
-        <label>Search</label>
-        <input ng-model="searchText">
-      </md-input-container>
     </md-subheader>
-    <md-divider ></md-divider>
+    <md-divider style="margin-bottom: 20px;"></md-divider>
     <md-list-item  ng-if="!snapshot.languages">
       <h1 class="md-display-1">No repo for this date :(</h1>
     </md-list-item>
