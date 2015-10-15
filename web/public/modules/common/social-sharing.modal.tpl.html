@@ -1,0 +1,33 @@
+<md-dialog>
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <h2>Share</h2>
+      <span flex></span>
+      <md-button class="md-icon-button" ng-click="hide()">
+        <md-icon class="material-icons">close</md-icon>
+      </md-button>
+    </div>
+  </md-toolbar>
+  <md-dialog-content>
+    <div layout="row" layout-sm="column"  layout-align="center center">
+      <md-button class="md-raised btn-social btn-facebook" social-facebook custom-url="{{url}}">
+        <md-icon class="fa md-24" md-font-icon="fa-facebook"></md-icon> Share on Facebook
+      </md-button>
+      <md-button class="md-raised btn-social btn-google-plus" social-gplus custom-url="{{url}}">
+        <md-icon class="fa md-24" md-font-icon="fa-google-plus"></md-icon> Share on Google+
+      </md-button>
+      <md-button class="md-raised btn-social btn-twitter" social-twitter custom-url="{{url}}">
+        <md-icon class="fa md-24" md-font-icon="fa-twitter"></md-icon> Share on Twitter
+      </md-button>
+    </div>
+    <md-input-container>
+      <label>Share using this url:</label>
+      <input type="text" ng-model="url"  />
+    </md-input-container>
+  </md-dialog-content>
+  <div class="md-actions" layout="row">
+    <md-button ng-click="answer('ok')" class="md-primary">
+      Done!
+    </md-button>
+  </div>
+</md-dialog>

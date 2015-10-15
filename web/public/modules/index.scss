@@ -1,0 +1,45 @@
+@import "common/styles/base";
+@import "common/styles/icons";
+@import "common/styles/social-sharing";
+
+.avatar {
+  width: 20px;
+  height: 20px;
+  // text-align: center;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.md-datepicker-calendar {
+  background-color: white;
+}
+
+.repo-card {
+  // &.ng-enter {
+  //   transition: opacity 2s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+  //   opacity: 0;
+  // }
+  // &.ng-enter-active {
+  //   opacity: 1;
+  //   // md-card-content{
+  //   //   background: black;
+  //   // }
+  // }
+  // &.ng-leave-active {
+  //     opacity: 0;
+  // }
+  &.ng-enter {
+    animation: fadeInLeft 0.4s;
+  }
+
+  &.ng-leave {
+    animation: fadeOutRight 0.4s;
+  }
+}
+
+
+
+// .md-calendar-selected-date {
+//   background-color: #3399EE;
+//   border-radius: 50%;
+// }

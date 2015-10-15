@@ -1,0 +1,64 @@
+<md-content flex>
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <h2>
+        <a href="#" ng-click="goHome()">Trending Machine</a>
+      </h2>
+      <span flex></span>
+      <md-button class="md-raised" aria-label="Github repo" ng-href="https://github.com/celrenheit/trending-machine">
+        <img src="/assets/misc/github-logo.png" alt="Open in github" height="24" width="24" style="vertical-align:middle;"> Github
+      </md-button>
+    </div>
+  </md-toolbar>
+
+  <md-list>
+    <md-subheader class="md-no-sticky">
+      <div layout="row" layout-sm="column">
+        <md-input-container flex md-no-float layout="row" layout-align="center center">
+            <md-icon class="material-icons" ng-click="showPicker($event)">event</md-icon>
+            <input ng-model='selectedDate' ng-click="showPicker($event)" type="date" placeholder="Date" name="date"  style="text-align:center;" flex>
+        </md-input-container>
+        <md-input-container md-no-float flex>
+          <md-select ng-model="selectedLang" aria-label="Select language">
+            <md-option ng-repeat="lang in languages" value="{{lang}}">
+              {{ (lang == "__all__" ? "All languages" : lang)  }}
+            </md-option>
+          </md-select>
+        </md-input-container>
+      </div>
+      <md-input-container flex>
+        <label>Search</label>
+        <input ng-model="searchText">
+      </md-input-container>
+    </md-subheader>
+    <md-divider ></md-divider>
+    <md-list-item  ng-if="!snapshot.languages">
+      <h1 class="md-display-1">No repo for this date :(</h1>
+    </md-list-item>
+    <md-list-item class="md-3-line repo-card"  ng-repeat="repo in snapshot.languages[selectedLang] | filter:searchText track by repo.name" ng-if="snapshot.languages" id="pos-{{ $index+1 }}">
+      <md-card class="" flex-sm flex-gt-sm="75" flex-gt-md="40">
+        <md-card-content>
+          <md-button class="md-title md-primary" ng-href="{{ ::repo.url }}" target="_blank">
+            {{ ::repo.name}}
+          </md-button>
+          <p>
+            {{ ::repo.description}}
+          </p>
+        </md-card-content>
+        <div class="md-actions" layout="row" layout-align="start center" ng-if="repo.built_by">
+            <md-button ng-href="{{::repo.url + '/graphs/contributors'}}"  target="_blank">
+              <span layout="row" layout-align="start center">
+                  <span class="md-subheader">Built by</span>
+                  <img ng-src="{{user.avatar}}" alt="{{ '@'+user.username }}" class="avatar" ng-repeat="user in repo.built_by">
+              </span>
+            </md-button>
+            <span flex></span>
+            <md-button ng-click="share($event, $index+1)">
+              <md-icon class="material-icons">share</md-icon> Share
+            </md-button>
+        </div>
+      </md-card>
+    </md-list-item>
+  </md-list>
+
+</md-content>
