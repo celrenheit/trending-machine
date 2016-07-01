@@ -2,8 +2,6 @@
 
 Explore Github's trending page in the past.
 
-[LIVE DEMO](http://trending-machine.salimalami.com).
-
 This project is intended to be an example of the [spider package](https://github.com/celrenheit/spider).
 
 Is has a list of pre-defined languages defined in the [settings.json](https://github.com/celrenheit/trending-machine/blob/master/settings.json).
